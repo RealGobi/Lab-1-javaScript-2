@@ -4,14 +4,12 @@ var lastname = 'Svensson'
 
 var path = `./user_${lastname}.txt`;
 
-var userTxt = JSON.stringify(lastname);
-
 var options = {
     encoding: 'utf8',
     flag: 'w+'
 };
 
-fs.writeFile(path, userTxt, options, (err) =>{
+fs.writeFile(path, lastname, options, (err) =>{
     if (err){
         console.error(err);
     }
